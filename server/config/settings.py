@@ -36,7 +36,10 @@ DEBUG = bool(os.getenv('DEBUG') == 'True')
 ALLOWED_HOSTS = ['admin.tarnsfer-travel.uz', '127.0.0.1', 'localhost']
 
 # CSRF_TRUSTED_ORIGINS - CSRF tekshiruvi uchun ishonchli domenlar
-CSRF_TRUSTED_ORIGINS = ['https://admin.tarnsfer-travel.uz']
+CSRF_TRUSTED_ORIGINS = [
+    "https://admin.tarnsfer-travel.uz",
+    "http://admin.tarnsfer-travel.uz",
+]
 
 
 # Application definition

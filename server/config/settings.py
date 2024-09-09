@@ -28,7 +28,14 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.getenv('DEBUG') == 'True')
 
-ALLOWED_HOSTS = ['*'] if DEBUG else os.getenv('ALLOWED_HOSTS').split(',')
+# ALLOWED_HOSTS = ['*'] if DEBUG else os.getenv('ALLOWED_HOSTS').split(',')
+
+# ALLOWED_HOSTS - ilovangizga ruxsat berilgan domenlar
+
+ALLOWED_HOSTS = ['admin.tarnsfer-travel.uz', '127.0.0.1', 'localhost']
+
+# CSRF_TRUSTED_ORIGINS - CSRF tekshiruvi uchun ishonchli domenlar
+CSRF_TRUSTED_ORIGINS = ['https://admin.tarnsfer-travel.uz']
 
 
 # Application definition

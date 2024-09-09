@@ -32,6 +32,7 @@ DEBUG = bool(os.getenv('DEBUG') == 'True')
 
 # ALLOWED_HOSTS - ilovangizga ruxsat berilgan domenlar
 
+# ALLOWED_HOSTS - ilovangizga ruxsat berilgan domenlar
 ALLOWED_HOSTS = ['admin.tarnsfer-travel.uz', '127.0.0.1', 'localhost']
 
 # CSRF_TRUSTED_ORIGINS - CSRF tekshiruvi uchun ishonchli domenlar
@@ -142,7 +143,10 @@ USE_I18N = True
 
 USE_TZ = True
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = [
+    "https://admin.tarnsfer-travel.uz",
+    "http://admin.tarnsfer-travel.uz",
+]
 
 
 # Static files (CSS, JavaScript, Images)

@@ -35,7 +35,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = bool(os.getenv('DEBUG') == 'True')
 
 # ALLOWED_HOSTS = ['*'] if DEBUG else os.getenv('ALLOWED_HOSTS').split(',')
-
+#
 # ALLOWED_HOSTS - ilovangizga ruxsat berilgan domenlar
 
 # ALLOWED_HOSTS - ilovangizga ruxsat berilgan domenlar

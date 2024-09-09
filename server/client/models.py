@@ -57,11 +57,11 @@ class Client(models.Model):
     zayafka_vaqti = models.DateTimeField(auto_now_add=True)
     tekshirilgan_vaqti = models.DateTimeField(auto_now=True)
     STATUS_CHOICES = [
-        ('KELADI', 'KELADI'),
-        ('ULANILMADI', 'ULANILMADI'),
-        ('QOLDIRILDI', 'QOLDIRILDI'),
-        ('KEMIDI', 'KEMIDI')
+        ('Потенциальный', 'Потенциальный'),          # Potensial mijoz
+        ('Просто интересовался', 'Просто интересовался'),  # Shunchaki qiziqqan
+        ('Не поднял телефон', 'Не поднял телефон')    # Telefonga javob bermadi
     ]
+
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, blank=True, null=True)
     comment = models.TextField(blank=True, null=True)
 

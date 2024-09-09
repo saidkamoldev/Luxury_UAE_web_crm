@@ -10,7 +10,8 @@ def append_client_api(request):
     data = request.data
     f_i_o = data.get('name')
     telefon_raqam = data.get('phone_number')
-    Client.objects.create(f_i_o=f_i_o, telefon_raqam=telefon_raqam)
+    message = data.get('message')
+    Client.objects.create(f_i_o=f_i_o, telefon_raqam=telefon_raqam , message=message )
     subject = "CosmosTJ"
     template = render_to_string('email/email.html', {'f_i_o': f_i_o, 'telefon_raqam': telefon_raqam})
     from_email = settings.EMAIL_HOST_USER

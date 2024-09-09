@@ -28,7 +28,7 @@ class ClientAdmin(admin.ModelAdmin):
     form = ContactForm
     list_display_links = ('f_i_o', 'telefon_raqam')
     list_display = ('id', 'ishchi', 'f_i_o', 'telefon_raqam', 'zayafka_vaqti',
-                    'tekshirilgan_vaqti', 'status', 'comment')  # 'comment' qo'shganingizga ishonch hosil qiling
+                    'tekshirilgan_vaqti', 'status', 'comment','message')  # 'comment' qo'shganingizga ishonch hosil qiling
 
     actions = ['export_to_excel']
     def export_to_excel(self, request, queryset):

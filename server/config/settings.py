@@ -15,6 +15,12 @@ from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
 
+# Django'ga so'rovlarning HTTPS orqali kelayotganligini bildirish
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True  # HTTP so'rovlarni HTTPS'ga yo'naltirish
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
